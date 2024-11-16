@@ -1,3 +1,5 @@
 .env
 vendor
 *.sqlite
+.idea
+.DS_Store
