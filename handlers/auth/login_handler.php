@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: ../../index.php');
         exit;
     } else {
-        echo "Корисничкото име или лозинката се невалидни.<br>";
-        echo "<a href='../../pages/auth/login.php'><button>Обидете се повторно</button></a>";
+        echo "Invalid username or password<br>";
+        echo "<a href='../../pages/auth/login.php'><button>Try again</button></a>";
         exit;
     }
 }

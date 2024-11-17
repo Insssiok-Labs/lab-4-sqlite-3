@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     if (strlen($username) < 3 || strlen($password) < 6) {
-        die('Корисничкото име мора да има најмалку 3 карактери, а лозинката најмалку 6.');
+        die('Username must be at least 3 chars and password at least 6 chars');
     }
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt->execute();
 
-        echo "Регистрацијата е успешна! <a href='../../pages/auth/login.php'>Најавете се тука</a>";
+        echo "Success<a href='../../pages/auth/login.php'>Login here</a>";
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
             die("Корисничкото име веќе постои.");

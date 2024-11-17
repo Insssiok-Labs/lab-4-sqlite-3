@@ -11,19 +11,19 @@ if (isset($_SESSION['jwt']) && decodeJWT($_SESSION['jwt'])) {
 ?>
 
 <div>
-    <h2>Најавете се</h2>
+    <h2>Login</h2>
     <form action="../../handlers/auth/login_handler.php" method="POST">
         <div>
-            <label for="username">Корисничко име</label>
+            <label for="username">Username</label>
             <input type="text" name="username" id="username" required>
         </div>
         <div>
-            <label for="password">Лозинка</label>
+            <label for="password">Password</label>
             <input type="password" name="password" id="password" required>
         </div>
-        <button type="submit">Најави се</button>
+        <button type="submit">Login</button>
         <p>
-            Немате акаунт? <a href="register.php">Регистрирајте се тука</a>
+            <a href="register.php">Register here</a>
         </p>
     </form>
 </div>
